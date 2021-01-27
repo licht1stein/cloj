@@ -30,3 +30,25 @@ def take(n, coll):
 
 def drop(n, coll):
     return coll[n:]
+
+
+def take_while(fn: Callable, coll):
+    last_index = None
+    for i, item in enumerate(coll):
+        if not fn(item):
+            last_index = i
+            break
+    if last_index:
+        return coll[:last_index]
+    return drop(len(coll) + 1, coll)
+
+
+def drop_while(fn: Callable, coll):
+    keep_index = None
+    for i, item in enumerate(coll):
+        if fn(item):
+            keep_index = i
+            break
+    if not keep_index:
+        return drop(len(coll) + 1, coll)
+    return coll[keep_index:]

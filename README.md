@@ -19,6 +19,7 @@ pip install cloj
 
 Implemented:
 * take/drop
+* take_while/drop_while
 * some
 * nth, first, second, third, fourth, fifth, forty_second, last
 
