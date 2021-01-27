@@ -1,6 +1,7 @@
-# Clojure inspired helper functions
+# Clojure inspired helper functions for Python
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cloj)
 
-This is a small library with Clojure inspired helper functions. It uses only the standard library, without any external dependencies. Should work on Python 3.6 and above.
+This is a small library with Clojure inspired helper functions. It uses only the standard library, without any external dependencies.
 
 The goal is to implement replicas of the Clojure funcs that I admire.
 
