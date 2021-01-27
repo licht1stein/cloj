@@ -25,7 +25,7 @@ drop (100, [1, 2, 3, 4, 5])
 ```
 
 ```python
-from cloj import first, Fsecond, third, fourth, fifth, forty_second, last
+from cloj import first, second, third, fourth, fifth, forty_second, last
 
 first([1, 2, 3])
 >> 1
