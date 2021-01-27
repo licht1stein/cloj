@@ -1,6 +1,6 @@
 # Clojure inspired helper functions
 
-This is a small library with Clojure inspired helper functions. It has no external dependencies.
+This is a small library with Clojure inspired helper functions. It uses only the standard library, without any external dependencies.
 
 The goal is to implement replicas of the Clojure funcs that I find useful.
 
