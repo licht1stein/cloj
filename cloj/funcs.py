@@ -5,7 +5,8 @@ from contextlib import suppress
 
 def some(fn: Callable, collection: Iterable):
     for i in collection:
-        if result := fn(i):
+        result = fn(i)
+        if result:
             return result
 
 
