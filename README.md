@@ -1,5 +1,6 @@
 # Clojure inspired helper functions for Python
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cloj)
+![PyPI - License](https://img.shields.io/pypi/l/cloj)
 
 This is a small library with Clojure inspired helper functions. It uses only the standard library, without any external dependencies.
 
