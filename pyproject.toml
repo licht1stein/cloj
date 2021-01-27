@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cloj"
+version = "0.1.0"
+description = "Clojure inspired helper functions"
+authors = ["MB <mb@blaster.ai>"]
+readme = "README.md"
+homepage = "https://github.com/licht1stein/cloj"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
