@@ -1,6 +1,4 @@
-import pytest
-
-from cloj import nth, first, second, third, fourth, fifth, forty_second, last
+from cloj import nth, forty_second, last
 
 
 def test_nth__empty(empty_list):
