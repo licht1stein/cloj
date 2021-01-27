@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "cloj"
-version = "0.1.1"
+version = "0.1.2"
 description = "Clojure inspired helper functions"
 authors = ["MB <mb@blaster.ai>"]
 readme = "README.md"
 homepage = "https://github.com/licht1stein/cloj"
+license="MIT"
 
 [tool.poetry.dependencies]
 python = "^3.6"
