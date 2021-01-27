@@ -1,4 +1,4 @@
-from cloj import nth, forty_second, last
+from cloj import *
 
 
 def test_nth__empty(empty_list):
@@ -16,8 +16,6 @@ def test_nth__len_50(len_50_list):
 def test_partials(len_50_list):
     partials = "first second third fourth fifth".split()
     for i, name in enumerate(partials):
-        # noinspection PyUnresolvedReferences
-        import cloj
-        assert eval(f'cloj.{name}')(len_50_list) == len_50_list[i]
+        assert eval(name)(len_50_list) == len_50_list[i]
     assert forty_second(len_50_list) == len_50_list[41]
     assert last(len_50_list) == len_50_list[-1]
