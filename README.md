@@ -1,8 +1,20 @@
 # Clojure inspired helper functions
 
-This is a small library with Clojure inspired helper functions. It uses only the standard library, without any external dependencies.
+This is a small library with Clojure inspired helper functions. It uses only the standard library, without any external dependencies. Should work on Python 3.6 and above.
 
-The goal is to implement replicas of the Clojure funcs that I find useful. To keep it in the spirit of Clojure's immutability cloj functions make heavy use of `copy.copy` to make sure that the copy is returned, and changing it will not modify the data in original data structures.
+The goal is to implement replicas of the Clojure funcs that I admire.
+
+## Installation
+
+With [poetry](https://python-poetry.org/) (always recommended):
+```bash
+poetry add cloj
+```
+
+With pip:
+```bash 
+pip install cloj
+```
 
 Implemented:
 * take/drop
