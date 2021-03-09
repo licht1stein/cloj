@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cloj"
-version = "0.1.3"
+version = "0.2.0"
 description = "Clojure inspired helper functions"
 authors = ["MB <mb@blaster.ai>"]
 readme = "README.md"
