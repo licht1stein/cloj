@@ -1,6 +1,7 @@
 import functools
 from collections import Callable, Iterable, Sized
 from contextlib import suppress
+from typing import Container
 
 
 def some(fn: Callable, collection: Iterable):
@@ -52,3 +53,23 @@ def drop_while(fn: Callable, coll):
     if not keep_index:
         return drop(len(coll) + 1, coll)
     return coll[keep_index:]
+
+
+def get_in(coll: Container, ks: Iterable, default=None):
+    """Returns the value in a nested associative structure,
+    where ks is a sequence of keys. Returns the `default`
+    value if the key is not present.
+
+    :example:
+    >>> sample = {"foo": {"bar": [0, {"spam": "target"}, 1]}}
+    >>> get_in(sample, ["foo", "bar", 1, "spam"])
+    "target"
+    """
+    this, *rest = ks
+    try:
+        result = coll[this]
+    except (KeyError, IndexError):
+        return default
+    if not rest:
+        return result or default
+    return get_in(result, rest, default)
