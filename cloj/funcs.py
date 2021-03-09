@@ -52,3 +52,17 @@ def drop_while(fn: Callable, coll):
     if not keep_index:
         return drop(len(coll) + 1, coll)
     return coll[keep_index:]
+
+
+def get_in(coll, ks, default=None):
+    """Returns the value in a nested associative structure,
+    where ks is a sequence of keys. Returns None if the key
+    is not present, or the default value if supplied."""
+    this, *rest = ks
+    try:
+        result = coll[this]
+    except (KeyError, IndexError):
+        return default
+    if not rest:
+        return result or default
+    return get_in(result, rest, default)
