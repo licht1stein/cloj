@@ -25,6 +25,7 @@ Implemented:
 * take_while/drop_while
 * some
 * nth, first, second, third, fourth, fifth, forty_second, last
+* get-in
 
 Some examples:
 
@@ -52,4 +53,12 @@ last([1, 2, 3])
 
 first([])
 >> None
+```
+
+```python
+from cloj import get_in
+
+sample = {"foo": {"bar": [0, {"spam": "target"}, 1]}}
+get_in(sample, ["foo", "bar", 1, "spam"])
+>>> "target"
 ```

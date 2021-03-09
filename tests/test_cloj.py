@@ -42,6 +42,7 @@ def test_drop_while(len_50_list):
     ({"foo": {"bar": [1, 2, 3]}}, ["foo", "bar", 1], None, 2),
     ({"foo": {}}, ["foo", "bar"], "default", "default"),
     ({"foo": {"bar": [{"spam": 16}, 2, 3]}}, ["foo", "bar", 0, "spam"], None, 16),
+    ({"foo": {"bar": [0, {"spam": "target"}, 1]}}, ["foo", "bar", 1, "spam"], None, "target")
 ])
 def test_get_in(coll, keys, default, expected):
     assert get_in(coll, keys, default) == expected
